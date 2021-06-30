@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Public pages SPA - React
+Route::get('/{any}', function () {
+    return view('public');
+})->where('any','^$|[a-z0-9]+\b(?<!auth|logout|student)');
+
+// Routes for google login
+Route::group(['prefix' => 'auth'], function () {
+    Route::get('/google', [LoginController::class,'redirectToProvider'])->name('login-google');
+    Route::get('/google/callback', [LoginController::class,'handleProviderCallback']);
+});
+
+// Private Routes
+Route::group(['middleware' => 'auth:sanctum'], function () {
+    Route::get('/auth/addprogram', [LoginController::class,'addProgram']);
+    Route::get('/auth/logout', [LoginController::class,'logout']);
+    Route::middleware('hasAProgram')->group(function () {
+        Route::get('/student', function(){ return view('student'); });
+    });
 });
