@@ -25,22 +25,26 @@ class UserFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
+            'codigo' => $this->faker->numberBetween(20200000000,20202163883),
             'email_verified_at' => now(),
+            'provider' => 'google',
+            'provider_id' => $this->faker->numberBetween(20200000000,20202163883),
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'remember_token' => Str::random(10),
+            'program_id' => 418
         ];
     }
 
     /**
-     * Indicate that the model's email address should be unverified.
+     * El usuario no ha regitrado u programa
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory
      */
-    public function unverified()
+    public function sinPrograma()
     {
         return $this->state(function (array $attributes) {
             return [
-                'email_verified_at' => null,
+                'program_id' => null,
             ];
         });
     }

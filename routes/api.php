@@ -16,9 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 // Protected routes - Sanctum
 Route::group(['middleware' => ['auth:sanctum']], function(){
-    Route::get('/user', [UserController::class,'getMyData']);
     Route::get('/myprogram', [UserController::class,'addProgram']);
     Route::middleware('hasAProgram')->group(function () {
-        // Aqui rutas privadas para usuarios de software
+        Route::get('/user', [UserController::class,'getMyData']);
     });
 });
