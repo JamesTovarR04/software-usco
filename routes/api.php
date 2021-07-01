@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Protected routes - Sanctum
+Route::group(['middleware' => ['auth:sanctum']], function(){
+    Route::get('/myprogram', [UserController::class,'addProgram']);
+    Route::middleware('hasAProgram')->group(function () {
+        Route::get('/user', [UserController::class,'getMyData']);
+    });
 });
