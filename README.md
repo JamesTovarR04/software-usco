@@ -10,7 +10,7 @@ Software usco es una plataforma digital para los programas de pregrado de **inge
 ### Requerido
 
 - [**PHP** *^7.3.0*](https://www.php.net/manual/es/index.php).
-- [**MySQL** *^8.0 *](https://www.mysql.com/downloads/).
+- [**MySQL** *^8.0*](https://www.mysql.com/downloads/).
 - [**Composer**](https://getcomposer.org/download/).
 - [**Git**](https://git-scm.com/downloads).
 
@@ -18,41 +18,57 @@ Software usco es una plataforma digital para los programas de pregrado de **inge
 
 #### Clonar el Repositorio de git
 
-`git clone https://github.com/JamesTovarR04/soft-usco.git`
+```shell
+git clone https://github.com/JamesTovarR04/soft-usco.git
+```
 
 - Moverse a la carpeta del proyecto:
 
-`cd soft-usco`
+```shell
+cd soft-usco
+```
 
 #### Descargar las dependencias
 
-`composer install`
+```shell
+composer install
+```
 
 #### Configurar Entorno
 La configuración del entorno se hace en el archivo .env pero esé archivo no se puede versionar según las restricciones del archivo .gitignore, igualmente en el proyecto hay un archivo de ejemplo .env.example debemos copiarlo con el siguiente comando:
 
-`cp .env.example .env`
+```shell
+cp .env.example .env
+```
 
 Luego es necesario modificar los valores de las variables de entorno para adecuar la configuración a nuestro entorno de desarrollo, por ejemplo los parámetros de **conexión a la base de datos**.
 Para que funciona el sistema de login debe crear y configurar un proyecto en google cloud platform con una cuenta de google vinculada a la universidad para obtener las credenciales para cliente OAuth 2.0 e ingresarlas en las variables de entorno:
+
    ```shell
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 ```
+
 #### Generar Clave de Seguridad de la Aplicación
 
-`php artisan key:generate`
+```shell
+php artisan key:generate
+```
 
 #### Migrar la Base de Datos
 
 El proyecto ya tiene los modelos y migraciones generados. Entonces lo único que nos hace falta es ejecutar la migración y ejecutar el siguiente comando:
 
-`php artisan migrate:fresh`
+```shell
+php artisan migrate:fresh
+```
 
 #### Correr
 Una vez configurada la aplicación, puede iniciar el servidor de desarrollo **local** de Laravel utilizando el comando serve de Artisan CLI:
 
-`php artisan serve`
+```shell
+php artisan serve
+```
 
 ## Contribuir al desarrollo
 
