@@ -1,13 +1,18 @@
 
 <p align="center"><img src="https://raw.githubusercontent.com/JamesTovarR04/soft-usco/f7043c2fd32051dd3986ded3991cc0cb1ebba333/public/images/svg/Imagotipo-Hrz-Software.svg" width="300"></p>
+
 ## Acerca de Software USCO
+
 Software usco es una plataforma digital para los programas de pregrado de **ingeniería de software** y **tecnología en desarrollo de software** de la <a href="https://www.usco.edu.co/es/" target="_blank">Universidad Surcolombiana</a> a cual tiene como objetivo brindar la mayor información posible respecto a estos programas.
+
 ## Instalar y correr (Local)
+
 ### Requerido
-- **PHP** [*^7.3.0* ]
-- **MySQL** [*^8.0 *]
-- **Composer**
-- **Git**
+
+- [**PHP** *^7.3.0*](https://www.php.net/manual/es/index.php).
+- [**MySQL** *^8.0 *](https://www.mysql.com/downloads/).
+- [**Composer**](https://getcomposer.org/download/).
+- [**Git**](https://git-scm.com/downloads).
 
 ### Instalar
 
