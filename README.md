@@ -3,7 +3,7 @@
 
 ## Acerca de Software USCO
 
-Software usco es una plataforma digital para los programas de pregrado de **ingeniería de software** y **tecnología en desarrollo de software** de la <a href="https://www.usco.edu.co/es/" target="_blank">Universidad Surcolombiana</a> a cual tiene como objetivo brindar la mayor información posible respecto a estos programas.
+Software usco es una plataforma digital para los programas de pregrado de **ingeniería de software** y **tecnología en desarrollo de software** de la <a href="https://www.usco.edu.co/es/" target="_blank">Universidad Surcolombiana</a> la cual tiene como objetivo brindar la mayor información posible respecto a estos programas.
 
 ## Instalar y correr (Local)
 
@@ -72,7 +72,7 @@ php artisan serve
 
 ## Contribuir al desarrollo
 
-Para contribuir al desarrollo del proyecto debes pertenecer a la **comunidad estudiantil de la Universidad Surcolombiana**, haga un fork del repositorio y desarrolla siguiendo la [guia de desarrollo](https://github.com/JamesTovarR04/soft-usco/blob/develop/DEVELOP.md "guia de desarrollo").
+Para contribuir al desarrollo del proyecto debes pertenecer a la **comunidad estudiantil de la Universidad Surcolombiana**, haga un fork del repositorio y desarrolla siguiendo la [guia de desarrollo](https://github.com/JamesTovarR04/soft-usco/blob/develop/DEVELOP.md "guía de desarrollo").
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/JamesTovarR04/soft-usco/develop/public/images/readme/laravel.jpg"></a><a href="https://es.reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/JamesTovarR04/soft-usco/develop/public/images/readme/react.jpg"></a></p>
 Por el momento se esta usando el framework **Laravel 8 **para el desarrollo del back-end y la librería de **react js** para el front-end.
